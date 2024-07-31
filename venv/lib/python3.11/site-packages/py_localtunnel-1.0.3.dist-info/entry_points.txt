@@ -1,0 +1,3 @@
+[console_scripts]
+lt = py_localtunnel.cli:main
+pylt = py_localtunnel.cli:main

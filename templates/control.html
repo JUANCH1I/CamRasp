@@ -1,0 +1,7 @@
+{% for pin, pin_info in pins.items() %}
+    <div class="gpio-status">
+        <h5>{{ pin_info.name }} - Estado: <span id="state-{{ pin }}">{{ 'Apagado' if pin_info.state else 'Encendido' }}</span></h5>
+        <button class="btn btn-success btn-gpio" onclick="togglePin({{ pin }}, 'on')">Encender</button>
+        <button class="btn btn-danger btn-gpio" onclick="togglePin({{ pin }}, 'off')">Apagar</button>
+    </div>
+{% endfor %}
